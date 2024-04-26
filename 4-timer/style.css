@@ -1,0 +1,28 @@
+body {
+    color: #e2c129;
+}
+
+.timer {
+    background-color: #419f60;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 90px;
+    text-align: center;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 70% 57%, 100% 92%, 50% 92%, 0 92%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.time-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-weight: bold;
+    font-size: larger;
+    padding-top: 200px;
+}
+
+.newYear {
+    color: #800000;
+    font-size: x-large;
+    font-weight: bold;
+}
