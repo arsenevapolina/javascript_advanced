@@ -1,6 +1,5 @@
 "use strict";
 
-
 class Billing {
   amount;
   constructor(amount) {
@@ -12,7 +11,6 @@ class Billing {
   }
 }
 
-
 class FixBilling extends Billing {
   constructor(amount) {
     super(amount);
@@ -22,7 +20,6 @@ class FixBilling extends Billing {
     return console.log(`${this.amount}`);
   }
 }
-
 
 class HourBilling extends Billing {
   hour;
@@ -36,7 +33,6 @@ class HourBilling extends Billing {
   }
 }
 
-
 class ItemBilling extends Billing {
   item;
   constructor(amount, item) {
@@ -49,21 +45,17 @@ class ItemBilling extends Billing {
   }
 }
 
-
 const billing = new Billing(100);
 console.log(billing);
 billing.calculateTotal();
-
 
 const fixBilling = new FixBilling(100);
 console.log(fixBilling);
 fixBilling.calculateTotal();
 
-
 const hourBilling = new HourBilling(100, 8);
 console.log(hourBilling);
 hourBilling.calculateTotal();
-
 
 const itemBilling = new ItemBilling(100, 5);
 console.log(itemBilling);

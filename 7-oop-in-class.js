@@ -1,6 +1,5 @@
 "use strict";
 
-
 // Basic character
 
 class Character {
@@ -22,7 +21,6 @@ const Hobbit = new Character("hobbit", "Bilbo", "english");
 console.log(Hobbit);
 Hobbit.speak();
 
-
 // Orc
 
 class Orc extends Character {
@@ -40,7 +38,9 @@ class Orc extends Character {
   }
 
   speak() {
-    console.log(`Hello! I am a ${this.name}. I can speak ${this.lang} and have a gun.`);
+    console.log(
+      `Hello! I am a ${this.name}. I can speak ${this.lang} and have a gun.`
+    );
   }
 }
 
@@ -48,7 +48,6 @@ const Goblin = new Orc("orc", "Goblin", "orcLang");
 console.log(Goblin);
 Goblin.hit((Goblin.hasGun = false));
 Goblin.speak();
-
 
 // Elf
 
