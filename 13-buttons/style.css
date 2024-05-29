@@ -1,0 +1,112 @@
+* {
+    font-family: EB Garamond;
+    color: black;
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.wrapper__buttons {
+    display: flex;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.first-button {
+    background: #FF00FF;
+}
+
+.first-button:hover,
+.first-button:active {
+    background: #560556;
+    color: white;
+}
+
+.second-button {
+    background: #00FF00;
+}
+
+.second-button:hover,
+.second-button:active {
+    background: #0b650b;
+    color: white;
+}
+
+.third-button {
+    background: #FF0000;
+}
+
+.third-button:hover,
+.third-button:active {
+    background: #6f1616;
+    color: white;
+}
+
+.fourth-button {
+    background: #00FFFF;
+}
+
+.fourth-button:hover,
+.fourth-button:active {
+    background: #157777;
+    color: white;
+}
+
+.fifth-button {
+    background: #FFFF00;
+}
+
+.fifth-button:hover,
+.fifth-button:active {
+    background: #969617;
+    color: white;
+}
+
+.clicks {
+    display: flex;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.reset__counter {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: #A9A9A9;
+}
+
+.reset__counter:hover,
+.reset__counter:active {
+    background: #696969;
+}
