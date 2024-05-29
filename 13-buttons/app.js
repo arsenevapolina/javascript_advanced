@@ -1,11 +1,11 @@
 "use strict";
 
-const buttons = document.querySelector(".wrapper__buttons");
-const counter = document.querySelector(".clicks__number");
-const reset = document.querySelector(".reset__counter");
-let clicksNumber = 0;
-
 function clickOnTheButton() {
+  const buttons = document.querySelector(".wrapper__buttons");
+  const counter = document.querySelector(".clicks__number");
+  const reset = document.querySelector(".reset__counter");
+  let clicksNumber = 0;
+
   buttons.addEventListener("click", function (event) {
     clicksNumber++;
     counter.innerHTML = clicksNumber;
