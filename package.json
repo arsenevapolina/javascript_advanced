@@ -1,0 +1,27 @@
+{
+  "name": "15-build",
+  "version": "1.0.0",
+  "description": "homework",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "type user.js task.js index.js > bundle.js",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/polinapechenkova/javascript_advanced.git"
+  },
+  "keywords": [
+    "homework"
+  ],
+  "author": "Polina Pechenkova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polinapechenkova/javascript_advanced/issues"
+  },
+  "homepage": "https://github.com/polinapechenkova/javascript_advanced#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "rollup": "^4.18.0"
+  }
+}
