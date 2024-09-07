@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="baseStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pop-up__wrapper pop-up__hidden" id="add_popup">
+        <div class="pop-up">
+            <div class="pop-up__header">
+                <div class="pop-up__img-wrapper"><img class="pop-up__img" src="./assets/illustration.svg"
+                        alt="Иллюстрация">
+                </div>
+                <button class="pop-up__close">
+                    <svg width="24" height="24" class="pop-up__close-img" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.439 5.63592L5.63579 19.4391C5.32139 19.7535 4.82024 19.7739 4.53033 19.4839C4.24042 19.194 4.26073 18.6929 4.57513 18.3785L18.3784 4.57526C18.6928 4.26085 19.1939 4.24054 19.4838 4.53045C19.7737 4.82037 19.7534 5.32151 19.439 5.63592Z"
+                            fill="#8A8A8A" />
+                        <path
+                            d="M5.63543 4.57514L19.4387 18.3784C19.7531 18.6928 19.7734 19.1939 19.4835 19.4838C19.1935 19.7737 18.6924 19.7534 18.378 19.439L4.57477 5.6358C4.26036 5.3214 4.24005 4.82025 4.52996 4.53034C4.81988 4.24043 5.32102 4.26074 5.63543 4.57514Z"
+                            fill="#8A8A8A" />
+                    </svg>
+                </button>
+            </div>
+            <h2 class="pop-up__h2">Ваша встреча запланирована</h2>
+            <div class="pop-up__info">
+                <span class="info_light info_width">Название:</span>
+                <span class="info_dark info_width popup-name" id="popupTitle"></span>
+                <span class="info_light info_width">Описание встречи:</span>
+                <span class="info_dark info_width popup-desc" id="popupDescription"></span>
+                <span class="info_light info_width">Дата и время:</span>
+                <span class="info_dark info_width popup-when" id="popupDateTime"></span>
+                <span class="info_light info_width">Ссылка:</span>
+                <div class="pop-up__info-wrapper popup-link">
+                    <a class="info_dark" id="popupLink"></a>
+                    <button class="pop-up__button-copy" id="copyButton">
+                        <svg width="24" height="24" class="pop-up__button-copy" viewBox="0 0 24 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 13.1422V17.3422C16 20.8422 14.6 22.2422 11.1 22.2422H6.9C3.4 22.2422 2 20.8422 2 17.3422V13.1422C2 9.64219 3.4 8.24219 6.9 8.24219H11.1C14.6 8.24219 16 9.64219 16 13.1422Z"
+                                stroke="#8A8A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M22 7.14219V11.3422C22 14.8422 20.6 16.2422 17.1 16.2422H16V13.1422C16 9.64219 14.6 8.24219 11.1 8.24219H8V7.14219C8 3.64219 9.4 2.24219 12.9 2.24219H17.1C20.6 2.24219 22 3.64219 22 7.14219Z"
+                                stroke="#8A8A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="pop-up__buttons">
+                <a class="button primary_button button_white" href="#" target="_blank">Мои встречи</a>
+                <button class="button secondary_button button_green">Скопировать
+                    встречу</button>
+
+            </div>
+            <div class="pop-up__contact">
+                <span class="contact_text">Поделиться в:</span>
+                <a href="#"><img class="pop-up__telegram" src="./assets/telegram.svg" alt="Telegram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <h2 class="form__create">Заполни форму, чтобы создать встречу</h2>
+        <span class="form__instruction">Выбери формат встречи, а после заполни поля ниже</span>
+        <form action="#" class="form__wrapper" id="add-form" novalidate>
+
+            <div class="form__format-wrapper">
+                <div class="form__input-wrapper input_validation">
+                    <input class="form__radio input_field" type="radio" id="online" name="format" required>
+                    <label class="form__custom-radio" for="online"><img src="./assets/radio.svg"
+                            alt="Radio"></label>Online
+                </div>
+                <div class="form__input-wrapper input_validation">
+                    <input class="form__radio input_field" type="radio" id="offline" name="format" required checked>
+                    <label class="form__custom-radio" for="offline"><img src="./assets/radio.svg"
+                            alt="Radio"></label>Offline
+                </div>
+            </div>
+
+            <label class="form__label input_validation" for="title">
+                <input class="form__input form__name form__item input_field valid_checked name" type="text" id="title"
+                    name="title" required />
+                <span>Название встречи</span>
+            </label>
+
+            <label class="form__label input_validation" for="description">
+                <textarea class="form__input form__description input_field valid_checked desc" name="description"
+                    id="description" required></textarea>
+                <span>Описание встречи</span>
+            </label>
+
+            <label class="form__label form__label-datetime input_validation" for="datetime">
+                <input class="form__input form__datetime form__item input_field valid_checked when"
+                    type="datetime-local" id="dateTime" name="datetime" placeholder="Дата и время" required />
+                <span>Дата и время</span>
+            </label>
+
+            <label class="form__label input_validation" for="link">
+                <input class="form__input form__link form__item input_field valid_checked link" type="text" id="link"
+                    name="link" required />
+                <span>Ссылка или адрес встречи</span>
+            </label>
+            <button class="button button_green" type="submit" id="submit-button">Создать</button>
+        </form>
+    </div>
+    <script defer src="./app.js"></script>
+</body>
+
+</html>
