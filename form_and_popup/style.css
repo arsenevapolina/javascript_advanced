@@ -1,0 +1,511 @@
+* {
+    text-decoration: none;
+}
+
+.pop-up__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.pop-up__hidden {
+    display: none;
+}
+
+.pop-up {
+    max-width: 603px;
+    background: var(--background-white);
+    border-radius: 55px;
+    padding: 50px;
+}
+
+.pop-up__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-left: 52px;
+    margin-bottom: 48px;
+}
+
+.pop-up__img-wrapper {
+    max-width: 399px;
+    max-height: 265px;
+}
+
+.pop-up__img {
+    width: 399px;
+    height: 265px;
+}
+
+.pop-up__close {
+    border: none;
+    background: none;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.pop-up__close:hover svg path {
+    fill: var(--black);
+}
+
+.pop-up__close:active svg path {
+    fill: var(--black);
+}
+
+.pop-up__h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.38px;
+    text-align: center;
+    color: var(--black);
+    margin: 0px;
+    margin-bottom: 48px;
+}
+
+.pop-up__info {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 48px;
+    gap: 12px;
+}
+
+.pop-up__info-wrapper {
+    display: flex;
+    gap: 24px;
+    cursor: pointer;
+}
+
+.pop-up__info-wrapper a:hover {
+    color: var(--gray-dark);
+}
+
+.pop-up__info-wrapper a:active {
+    color: var(--black);
+}
+
+.info_light {
+    color: var(--gray-dark);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.72px;
+}
+
+.info_dark {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.info_width {
+    height: var(--info-heigth);
+    display: flex;
+    align-items: center;
+}
+
+.pop-up__button-copy {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.pop-up__button-copy:hover svg path {
+    stroke: var(--black);
+}
+
+.pop-up__button-copy:active svg path {
+    stroke: var(--black);
+}
+
+.pop-up__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.button {
+    padding: 16px 24px;
+    border-radius: 55px;
+    opacity: 0px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button_white {
+    border: 1px solid #263238;
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.button_white:hover {
+    border: 1px solid #8A8A8A;
+    color: var(--gray-dark);
+}
+
+.button_white:active {
+    border: 1px solid #263238;
+    color: var(--black);
+}
+
+.button_green {
+    background: var(--green-middle);
+    color: var(--background-white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    border: none;
+}
+
+.button_green:hover {
+    background: var(--green-light);
+}
+
+.button_green:active {
+    background: var(--green-dark);
+}
+
+.primary_button {
+    width: 196px;
+}
+
+.secondary_button {
+    width: 257px;
+}
+
+.pop-up__contact {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+}
+
+.contact_text {
+    color: var(--gray-dark);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.pop-up__telegram {
+    width: 48px;
+    height: 48px;
+}
+
+@media (max-width: 575px) {
+
+    .pop-up {
+        padding: 32px 18px;
+        max-width: 335px;
+    }
+
+    .pop-up__header {
+        max-width: 299px;
+        padding: 0px;
+        gap: 0px;
+        margin-bottom: 32px;
+    }
+
+    .pop-up__img-wrapper {
+        max-width: 299px;
+        max-height: 198px;
+    }
+
+    .pop-up__img {
+        width: 299px;
+        height: 198px;
+    }
+
+    .pop-up__h2 {
+        margin-bottom: 32px;
+    }
+
+    .pop-up__info {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+        margin-bottom: 32px;
+    }
+
+    .pop-up__info-wrapper {
+        gap: 8px;
+    }
+
+    .info_light {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+    }
+
+    .info_dark {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .info_width {
+        align-items: flex-end;
+    }
+
+    .pop-up__buttons {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+    }
+
+    .primary_button {
+        order: 1;
+        width: 257px;
+    }
+
+    .secondary_button {
+        width: 257px;
+    }
+}
+
+.form {
+    max-width: 596px;
+    padding: 32px 48px;
+    border-radius: 55px;
+    background: var(--background-green);
+}
+
+.form__create {
+    color: var(--black);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.form__instruction {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 32px;
+    display: block;
+}
+
+.form__format-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 32px;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.form__input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type='radio'] {
+    width: 1px;
+    height: 1px;
+}
+
+.form__custom-radio {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: var(--background-white);
+    border: 1px solid #ECEBEB;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__custom-radio:hover {
+    border: 1px solid #27AE60;
+}
+
+input[type='radio']:checked+.form__custom-radio {
+    background: var(--green-middle);
+}
+
+.form__input {
+    color: var(--black);
+    background: var(--background-white);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    border: 1px solid #ECEBEB;
+    width: 100%;
+    height: 100%;
+}
+
+.form__input:hover {
+    border: 1px solid #27AE60;
+    outline: none;
+}
+
+.form__input:focus {
+    border: 1px solid #ECEBEB;
+    outline: none;
+}
+
+input[type='datetime-local'] {
+    padding-right: 30px;
+    position: relative;
+}
+
+input[type=datetime-local]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form__item {
+    padding: 18px 24px;
+    border-radius: 55px;
+}
+
+.form__name,
+.form__datetime {
+    margin-bottom: 18px;
+}
+
+.form__description {
+    padding: 18px 24px 70px 24px;
+    border-radius: 40px;
+    margin-bottom: 18px;
+    resize: none;
+    max-height: 114px;
+    min-height: 0px;
+}
+
+.form__link {
+    margin-bottom: 18px;
+}
+
+.form__label {
+    position: relative;
+    display: block;
+}
+
+.form__label span,
+::placeholder {
+    color: var(--gray-dark);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    cursor: pointer;
+}
+
+.form__label-datetime span {
+    display: none;
+}
+
+.form__label input:focus+span,
+.form__label input:valid+span,
+.form__label textarea:focus+span,
+.form__label textarea:valid+span {
+    top: 12px;
+    left: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    color: var(--green-middle);
+    display: block;
+}
+
+.form__label input:focus,
+.form__label input:valid,
+.form__label textarea:focus,
+.form__label textarea:valid {
+    padding: 24px 24px 12px 24px;
+}
+
+
+.button {
+    padding: 16px 24px;
+    border-radius: 55px;
+    opacity: 0px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.button_green {
+    background: var(--green-middle);
+    color: var(--background-white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    border: none;
+}
+
+.button_green:hover {
+    background: var(--green-light);
+}
+
+.button_green:active {
+    background: var(--green-dark);
+}
+
+.error .input_field {
+    border-color: red;
+}
+
+.error-label {
+    display: block;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.invalid {
+    border-color: red;
+}
+
+
+
+@media (max-width: 575px) {
+    .form {
+        max-width: 480px;
+        padding: 24px 13px;
+    }
+
+    .form__description {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .form__format-wrapper {
+        gap: 48px;
+    }
+
+    .form__name,
+    .form__description,
+    .form__datetime {
+        margin-bottom: 12px;
+    }
+
+    .form__link {
+        margin-bottom: 12px;
+    }
+}
